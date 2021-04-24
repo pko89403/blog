@@ -1,8 +1,8 @@
 baseURL = "https://pko89403.github.io/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-author = "Hugo Authors"
-title = "Vitae"
+author = "pko89403"
+title = "유기농은 너무 비싸서 그런데 농약 친 건 어딨나요?"
 theme = "vitae"
 paginate = 5
 enableRobotsTXT = true
@@ -25,16 +25,16 @@ googleAnalytics = ""
 	homepage = false
 
 	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	keywords = ["hugo","vitae","theme","static"]
+	keywords = ["AI","BE","ML"]
 
 	# Add meta description in head part
-	description = "Vitae is a blog theme for Hugo that focuses on your content."
+	description = "I'm working as backend developer. M.S. from PNU CSE. I'm interested in recommederI'm working as backend developer. M.S. from PNU CSE. I'm interested in recommeder"
 
 	# Add pagetitle to homepage <title> tag
 	pagetitle = "All about static site generation"
 
 	# Add a subtitle to your website
-	subtitle = "[Vitae](https://github.com/dataCobra/hugo-vitae) is a blog theme for Hugo that focuses on your content."
+	subtitle = "[]()"
 
 	# Activate to show authors on pages if available
 	#listAuthor = true
@@ -43,10 +43,10 @@ googleAnalytics = ""
 	math = true
 
 	# Optional 80x80 avatar image.
-	avatar = "/img/vitae.jpg"
+	avatar = "/img/Avatar.png"
 
 	# Optional favicons for website
-	#favicon = true
+	favicon = true
 
 	# Add list of sections that should show up on the homepage
         mainSections = ["post"]
@@ -63,21 +63,21 @@ googleAnalytics = ""
 # Comments
 [params.comments]
 # Enable Comments with "true"
-enabled = false
+enabled = true
 
 # Comment provider:
 #   disqus (https://disqus.com)
 #   commento (https://commento.io)
-#engine = "disqus"
+engine = "disqus"
 
 # Content types to disable comments on.
 #disableOnTypes = ["page"]
 
 [params.comments.disqus]
-#shortname = "" # Paste the shortname from your Disqus dashboard.
+shortname = "Slave" # Paste the shortname from your Disqus dashboard.
 
 [params.comments.commento]
-#host = "" # Paste the domain of you commento.io system
+host = "Master" # Paste the domain of you commento.io system
 
 # Navigation
 [[menu.main]]
@@ -109,14 +109,14 @@ weight = 5
 [[params.social]]
 name = "Github"
 icon = "fab fa-github"
-url = "https://github.com/dataCobra/hugo-vitae"
-
-#[[params.social]]
-#name = "Email"
-#icon = "fas fa-envelope"
-#cmd = "mailto:example@example.com"
+url = "https://github.com/pko89403"
 
 [[params.social]]
-name = "RSS"
-icon = "fas fa-rss"
-url = "/index.xml"
+name = "Email"
+icon = "fas fa-envelope"
+cmd = "mailto:pko89403@gmail.com"
+
+#[[params.social]]
+#name = "RSS"
+#icon = "fas fa-rss"
+#url = "/index.xml"
