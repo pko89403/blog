@@ -2,6 +2,7 @@
 title: "ELMO : Deep contextualized word representations 리뷰"
 date: 2021-05-01T23:43:02+09:00
 draft: false
+categories: ["paper-review"]
 tags: ["ai", "nlp", "elmo"]
 ---
 
