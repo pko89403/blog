@@ -1,5 +1,5 @@
 ---
-title: "GPT2 : Language Models are Unsupervised Multitask Learners"
+title: "GPT2 : Language Models are Unsupervised Multitask Learners 리뷰"
 date: 2021-04-24T09:33:15+09:00
 draft: false
 categories: ["paper-review"]
