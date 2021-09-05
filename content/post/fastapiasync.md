@@ -10,7 +10,6 @@ FastAPI의 async def에 관해 작성된 페이지인 [Concurreny and async/awai
 
 우선 기본적으로 FastAPI는 `async def`를 꼭 쓸 필요는 없다. def 만으로도 비동기 처리 되도록 FastAPI 프레임 워크로 구현하고 있다.
 
-![Untitled](FastAPI%E1%84%8B%E1%85%B4%20async%20def%E1%84%8B%E1%85%AA%20def%200f2777788c114692bdd208c5012a584b/Untitled.png)
 {{< figure src="/images/fastapiasync/Untitled.png" title="" >}}
 
 
@@ -46,7 +45,7 @@ def results():
 
 비동기식 코드는 언어가 프로그램에게 코드의 특정 지점에서 다른 작업이 다른 곳에서 끝날 때까지 기다려야 함을 선언하는 방법을 가지고 있음을 의미한다.
 
-코루틴은  `async def` 함수로 반환 된 것을 용어로 표현한 것으로, 파이썬은 함수 같이 코루틴이 시작될 수 있고 어느 시점에 끝날 지 알고, await가 있을 때마다 내부적으로 일시 중지 될 수 있다는 것도 알고 있다.
+코루틴은  `async def` 함수로 반환 된 것을 용어로 표현한 것으로, 파이썬은 함수 같이 코루틴이 시작될 수 있고 어느 시점에 끝날 지 알고, `await`가 있을 때마다 내부적으로 일시 중지 될 수 있다는 것도 알고 있다.
 
 다른 작업을 기다린다는 의미를 다음과 같은 표현으로 나열할 수 있다.
 
@@ -61,11 +60,9 @@ def results():
 
 ## FastAPI << Starlette << Uvicorn << Cython
 
-ASGI(Asynchronous Web Python)의 주요 스펙은 Djang에서 개발되었지만, WebSocket에 대한 지원이 추가되었다. FastAPI는 병렬성과 비동기성 모두를 지원하기 때문에 성능 향상을 가질 수 있었다고 한다.
+FastAPI는 병렬성과 비동기성 모두를 지원하기 때문에 성능 향상을 가질 수 있었다고 한다. Starlette를 한번 감싸서 개발한 ASGI 프레임워크이다. 그렇기 때문에 Starlette를 직접 사용하는 것보다는 성능이 떨어진다(벤치마크에 비교한 결과가 나온다).
 
-FastAPI는 Starlette를 한번 감싸서 개발한 ASGI 프레임워크이다. 그렇기 때문에 Starlette를 직접 사용하는 것보다는 성능이 떨어지지만, 개발 속도를 올릴 수 있다. 
-
-Starlette는 내부적으로 uvicorn을 사용하는데 uvicorn은 uvloops와 httptools를 사용하는 초고속 ASGI 서버이다. 
+Starlette는 내부적으로 uvicorn을 사용하는데 uvicorn은 uvloops와 httptools를 사용하는 초고속 ASGI 서버이다. 참고로 ASGI(Asynchronous Web Python)의 주요 스펙은 Djang에서 개발되었지만, WebSocket에 대한 지원이 추가되었다.
 
 그리고 uvloop의 성능 비밀은 libuv와 Cython에 있다고 한다. uvicorn 실행 시에 `—loop` 옵션으로 `asyncio` 와 `uvloop`를 선택할 수 있다. auto 도 있는데 패키지가 설치 되어있다는 기준으로 선택한다고 한다.
 
