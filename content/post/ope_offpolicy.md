@@ -1,7 +1,7 @@
 ---
 title: "밴딧 추천 오픈소스 OBP의 Off-Policy-Evaluation 에 대한 설명 : Off-Policy Evaluation"
 date: 2021-11-13T16:05:47+09:00
-draft: true
+draft: false
 categories: ["Recommendation"]
 tags : ["Recsys", "Bandit", "Yahoo", "Open Bandit Pipeline", "Off Policy Evaluation"]
 ---
