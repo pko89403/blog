@@ -2,6 +2,7 @@
 title: "워크플로우 엔진 PREFECT : 개념"
 date: 2021-11-29T18:56:06+09:00
 draft: false
+categories: ["Workflow"]
 tags: ["Prefect", "Workflow", "Data Pipelining"]
 ---
 
