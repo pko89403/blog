@@ -281,8 +281,71 @@ RUN prefect backend server
 ADD agent_config.toml /root/.prefect/config.toml
 ```
 
-ECS Service를 생성할 Task Definition를 등록하고 ECS 클러스터에 Service를 생성한다.
+ECS에서 사용할 Task Execution Role과 Task Role을 생성한다.    
 
+Task Execution IAM Role
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ecr:GetAuthorizationToken",
+                "ecr:BatchCheckLayerAvailability",
+                "ecr:GetDownloadUrlForLayer",
+                "ecr:BatchGetImage",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+Task IAM Role
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:PassRole",
+                "ec2:AuthorizeSecurityGroupIngress",
+                "ec2:DescribeSecurityGroups",
+                "ec2:DescribeVpcs",
+                "ec2:DeleteSecurityGroup",
+                "ec2:DescribeSubnets"
+                "ec2:CreateSecurityGroup",
+                "ec2:DescribeNetworkInterfaces",
+                "ec2:CreateTags",
+                "s3:*",
+                "ecs:DescribeTaskDefinition",
+                "ecs:DeregisterTaskDefinition",
+                "ecs:DescribeClusters",
+                "ecs:ListAccountSettings",
+                "ecs:StopTask",
+                "ecs:DescribeTasks",
+                "ecs:ListTaskDefinitions",
+                "ecs:ListClusters",
+                "ecs:RunTask",
+                "ecs:RegisterTaskDefinition",
+                "ecs:CreateCluster",
+                "ecs:DeleteCluster",
+                "logs:CreateLogStream",
+                "logs:GetLogEvents",
+                "logs:DescribeLogGroups",
+                "logs:PutLogEvents",
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+ECS Service를 생성할 Task Definition를 등록하고 ECS 클러스터에 Service를 생성한다.
 ```json
 {
   "executionRoleArn": "{생성 Task-Execution-IAM-Role-ARN}",
