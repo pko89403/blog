@@ -6,8 +6,6 @@ categories: ["Recommendation"]
 tags: ["Recsys", "GNN", "GMCF", ]
 ---
 
-# 
-
 # ABSTRACT
 
 유저와 아이템의 어트리뷰트 들은 필수적인 사이드 정보이다. 본 논문에서는 기존 모델들이 구분하지 못하는 두 가지 어트리뷰트 상호작용을 발견했다. 
