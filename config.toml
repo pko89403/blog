@@ -3,7 +3,7 @@ languageCode = "en-us"
 defaultContentLanguage = "en"
 author = "pko89403"
 title = "유기농은 너무 비싸서 그런데 농약 친 건 어딨나요?"
-theme = "vitae"
+theme = "hugo-vitae"
 paginate = 5
 enableRobotsTXT = true
 
